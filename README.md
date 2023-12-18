@@ -1,8 +1,8 @@
-# Raspberry Pi Pico BadUSB
+# Sprig BadUSB
 
-Pico BadUSB is a simple implementation of the [BadUSB](https://en.wikipedia.org/wiki/BadUSB) idea. The features it has
+Sprig BadUSB is a simple implementation of the [BadUSB](https://en.wikipedia.org/wiki/BadUSB) idea and forked from the original [repository](https://github.com/kacperbartocha/pico-badusb/). The features it has
 will certainly prove themselves in most of less and more demanding tasks. What characterizes Pico BadUSB is a
-simple [setup](https://github.com/kacperbartocha/pico-badusb#setup). Additionally, it uses a similar syntax as
+simple [setup](https://github.com/itsimpeccable/sprig-evilkit#setup). Additionally, it uses a similar syntax as
 [DuckyScript](https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference), so writing the payload will
 be more intuitive for experienced Rubber Ducky users.
 
@@ -10,35 +10,11 @@ If you want to learn more about the Raspberry Pi Pico, reach out to the
 [documentation](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf) or visit the 
 [website](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico).
 
-## Overview
-The program was created with a view to automating tasks by performing previously prepared payloads. During the
-development process, the [CircuitPython documentation](https://docs.circuitpython.org) and the 
-[Adafruit HID library](https://docs.circuitpython.org/projects/hid) was very helpful. Pico BadUSB was designed to be
-used on a base Raspberry Pi Pico board, but it should also work on Pico W, a board with wireless module. The repository
-includes a ```pico-badusb.uf2``` file which is used for setup purpose. It contains a build of customized
-```CircuitPython 8.2.0``` with own packages and filesystem initialization instructions.
-
 ## Setup
-To set up everything correctly, just hold down the Boot Select ```BOTSEL``` button while connecting the ```micro USB```
+To set up everything correctly, just hold down the Boot Select ```BOOTSEL``` button while connecting the ```micro USB```
 cable to the microcontroller. After a while, the mounted media should appear in the system, to which you just need to
-drag and drop the file ```pico-badusb.uf2```, and then wait a moment. If the board has been used before, it may be
-necessary to [reset](https://github.com/kacperbartocha/pico-badusb#reset) the Flash memory.
-
-### Installation in steps:
-0. [Reset Flash](https://github.com/kacperbartocha/pico-badusb#reset) memory if you have used the device before
-1. Hold down the ```BOOTSEL``` button while connecting the ```micro USB``` cable
-2. Drag and drop the file ```pico-badusb.uf2``` onto the media
-3. Wait for the media to be remounted with the following files:
-    * ```boot.py```
-    * ```boot_out.txt```
-    * ```main.py```
-    * ```payload.txt```
-
-If you run into a problem at some point, or if the ```pico-badusb.uf2``` file doesn't work, the source code is available
-in the [pico-badusb directory](https://github.com/kacperbartocha/pico-badusb/tree/main/pico-badusb). To run the program,
-prepare the board preferably using [Thonny IDE](https://thonny.org) or yourself to work with ```CircuitPython``` in any
-version. Then move the ```boot.py```, ```main.py``` and ```payload.txt``` files to the root directory ```/```, and the
-```badusb``` directory move to the ```lib``` subdirectory on the Pico media.
+drag and drop the file ```adafruit-circuitpython-hack_club_sprig-en_US-X.X.X.uf2```, and then, place the badusb folder to the lib directory, other files are in the root of ```CIRCUITPY``` drive.
+necessary to [reset](https://github.com/itsimpeccable/sprig-evilkit#reset) the Flash memory.
 
 ## Manual
 The whole program is based on the content of the file ```payload.txt```, or another depending on whether you changed the
@@ -52,8 +28,8 @@ Compared to DuckyScript, Pico BadUSB's syntax is significantly simplified, leavi
 difference is the appearance of the keyword ```PRESS``` and ```HOTKEY``` which are required before using keys like
 ```CONTROL```, ```ALT``` or ```DELETE``` and their combinations. Syntactically incorrect elements will be skipped but
 will not interfere with the execution of the program. Keywords such as 
-[commands](https://github.com/kacperbartocha/pico-badusb#commands) or
-[keycodes](https://github.com/kacperbartocha/pico-badusb#keycodes) can be written with any combination of lowercase and
+[commands](https://github.com/itsimpeccable/sprig-evilkit#commands) or
+[keycodes](https://github.com/itsimpeccable/sprig-evilkit#keycodes) can be written with any combination of lowercase and
 uppercase letters. 
 
 | Command | Description                         | Example                       |
