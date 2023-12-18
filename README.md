@@ -1,6 +1,6 @@
-# Sprig BadUSB
+# Sprig Evil Kit
 
-Sprig BadUSB is a simple implementation of the [BadUSB](https://en.wikipedia.org/wiki/BadUSB) idea and forked from the original [repository](https://github.com/kacperbartocha/pico-badusb/). The features it has
+Sprig Evil Kit is a simple implementation of the [BadUSB](https://en.wikipedia.org/wiki/BadUSB) idea and forked from the original [repository](https://github.com/kacperbartocha/pico-badusb/). The features it has
 will certainly prove themselves in most of less and more demanding tasks. What characterizes Pico BadUSB is a
 simple [setup](https://github.com/itsimpeccable/sprig-evilkit#setup). Additionally, it uses a similar syntax as
 [DuckyScript](https://docs.hak5.org/hak5-usb-rubber-ducky/duckyscript-tm-quick-reference), so writing the payload will
