@@ -1,0 +1,1 @@
+STRING Please check https://github.com/itsimpeccable/sprig-evilkit/tree/main#commands for commands, so you can create your own payload.txt file.
